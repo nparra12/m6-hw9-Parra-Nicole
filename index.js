@@ -16,7 +16,7 @@ button.addEventListener('click', function(){
         var nameValue = data['name']
 
         var iconValue = data['weather'][0]['icon']
-        var iconUrl = "http://openweathermap.org/img/w/" + iconValue + ".png"
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconValue + ".png"
     
         var descValue = data['weather'][0]['description']
         var temperatureValue = data['main']['temp']
