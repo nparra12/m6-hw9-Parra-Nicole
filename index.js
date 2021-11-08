@@ -9,7 +9,7 @@ var desc = document.querySelector('.desc')
 var feelsLike = document.querySelector('.feelsLike')
 
 button.addEventListener('click', function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=ee4f9fdfde502adc802d6a4b286bb9e3')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&units=imperial&appid=ee4f9fdfde502adc802d6a4b286bb9e3')
     .then((response)=>response.json())
     .then((data)=> {
         var nameValue = data['name']
@@ -24,15 +24,13 @@ button.addEventListener('click', function(){
         desc.innerHTML = descValue
         console.log(desc)
 
-        forecastEl.innerHTML = temperatureValue
+        forecastEl.innerHTML = "Current temperature: "+ temperatureValue
         console.log(forecastEl)
 
-        feelsLike.innerHTML = feelslikesValue
-
-      
-    
+        feelsLike.innerHTML = "Feels like: " + feelslikesValue
     })
   
 
     
 })
+

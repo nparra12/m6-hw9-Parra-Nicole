@@ -34,4 +34,13 @@ button {
   margin-left: 1px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+}
+
 
